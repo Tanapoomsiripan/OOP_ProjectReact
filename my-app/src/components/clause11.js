@@ -15,6 +15,7 @@ function Clause11() {
     const count = parseInt(inputCount);
     setInputValues(Array.from({ length: count }, () => '')); 
   };
+  console.log(inputValues);
 
   const handleSubmit = () => {
     // ดำเนินการคำนวณหรือดำเนินการอื่น ๆ ที่คุณต้องการที่นี่

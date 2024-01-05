@@ -18,15 +18,15 @@ function Clause1() {
     <Container>
       <Row className="justify-content-center">
         <Col xs={12} md={4} className="border p-3">
-      <h1>Section 1</h1>
-      <label>
-        Enter a number: &nbsp;
-      <input type="number" value={x} onChange={(e) => setX(parseInt(e.target.value))} />
-      </label>
-      &nbsp;<Button onClick={calculateAns}>Calculate</Button>
-      <p>Result: {ans}</p>
+          <h1>Section 1</h1>
+          <label>
+            Enter a number: &nbsp;
+          <input type="number" value={x} onChange={(e) => setX(parseInt(e.target.value))} />
+          </label>
+          &nbsp;<Button onClick={calculateAns}>Calculate</Button>
+          <p>Result: {ans}</p>
       
-      <Button href="/">BackHome</Button>
+       <Button href="/">BackHome</Button>
       </Col>
       </Row>
     </Container>

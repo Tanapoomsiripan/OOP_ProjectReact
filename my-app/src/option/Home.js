@@ -16,6 +16,7 @@ return (
                     <Link to="/clause1" className='btn'>ข้อที่1</Link><br/>
                     <Link to="/clause2" className='btn'>ข้อที่2</Link><br/>
                     <Link to="/clause3" className='btn'>ข้อที่3</Link><br/>
+                    <Link to="/clause4" className='btn'>ข้อที่4</Link><br/>
                     <Link to="/clause5" className='btn'>ข้อที่5</Link><br/>
                     <Link to="/clause6" className='btn'>ข้อที่6</Link><br/>
                     <Link to="/clause7" className='btn'>ข้อที่7</Link><br/>
@@ -25,7 +26,7 @@ return (
                     
                 <Col md={{ span: 4, offset: 4 }} className="border p-3">
                     <Link to="/clause11" className='btn'>ข้อ11</Link><br/>
-                    <Link to="/clause13" className='btn'>clause13(ยังไม่เสร็จ)</Link><br/>
+                    <Link to="/clause13" className='btn'>ข้อ13</Link><br/>
                     <Link to="/clause15" className='btn'>ข้อ15</Link><br/>
                     <Link to="/clause16" className='btn'>ข้อ16</Link><br/>
                     <Link to="/clause17" className='btn'>ข้อ17</Link><br/>

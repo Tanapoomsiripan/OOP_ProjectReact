@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 function Clause13() {
   const initialWoodValues = [
     { a: 0, b: 0 },
@@ -21,43 +24,42 @@ function Clause13() {
 
   const compareab = () => {
     console.log(woodValues);
-
-    // ตรวจสอบว่าสามารถประกอบกล่องได้หรือไม่
-    let canAssemble = true;
-
-    for (let i = 0; i < woodValues.length; i++) {
-      
-      const a1 = woodValues[i].a;
-      const b1 = woodValues[i].b;
-
-      for (let j = i + 1; j < woodValues.length; j++) {
-        const a2 = woodValues[j].a;
-        const b2 = woodValues[j].b;
-
-        if((a1 && a2)==(b1 && b2)){
-
-        }else if((a1 && a2)==(b2 && b1)){
-          
-        }else if((a2 && a1)==(b2 && b1)){
-
-        }else if((a2 && a1)==(b1 && b2)){
-
+    
+    console.log();
+    console.log((woodValues[1].a === woodValues[5].a) && (woodValues[1].b === woodValues[5].b));
+    let count = 0;
+    
+  
+    for (let i = 0; i < woodValues.length - 1; i++) {
+      for(let j =0; j < woodValues.length -1 ;j++){
+        if ((woodValues[i].a === woodValues[j+1].a) && (woodValues[i].b === woodValues[j+1].b)) {
+          count++;
+        } 
+        if ((woodValues[i].a === woodValues[j+1].b) && (woodValues[i].b === woodValues[j + 1].a)) {
+          count++;
         }
-
-        
       }
+       
+      
     }
-
-    if (canAssemble) {
-      setresult("Y")
+    console.log(count);
+  
+    if (count === 8) {
+      setresult("Yes");
     } else {
-      setresult("N")
+      setresult("No");
     }
+  
+   
   };
+  
 
   return (
-    <div>
-      {woodValues.map((wood, index) => (
+    <div className="centered-container">
+      <Container>
+      <Row className="justify-content-center">
+        <Col xs={12} md={4} className="border p-3">
+        {woodValues.map((wood, index) => (
         <div key={index}>
           <input
             type="text"
@@ -71,8 +73,14 @@ function Clause13() {
           />
         </div>
       ))}
-      <button onClick={compareab}>Compare</button><br/>
-      Result: {result}
+      <br/>
+      <Button onClick={compareab}>Compare</Button><br/><br/>
+      Result: {result} <br/><br/>
+      <Button href="/">BackHome</Button>
+
+ 		</Col>
+      </Row>
+    </Container>
     </div>
   );
 }

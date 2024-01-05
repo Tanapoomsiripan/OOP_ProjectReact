@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "./App.css"; 
 import { 
   BrowserRouter as Router, 
@@ -29,13 +29,25 @@ import Clause32 from './components/clause32';
 import Clause33 from './components/clause33';
 import Clause34 from './components/clause34';
 import Clause17 from './components/clause17';
+import Clause4 from './components/clause4';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App(){
+
+
+
+
+ function App (){
+ 
+  
+
+  
   
   return (
+    <div>
     <BrowserRouter>
+    
       <Routes>
+        
           <Route path='/' element={<Home/>}/>
           <Route path='clause1' element={<Clause1/>}/>
           <Route path='clause2' element={<Clause2/>}/>
@@ -59,10 +71,16 @@ function App(){
           <Route path='clause33' element={<Clause33/>}/>
           <Route path='clause34' element={<Clause34/>}/>
           <Route path='clause17' element={<Clause17/>}/>
+          <Route path='clause4' element={<Clause4 />}/>
       </Routes>
     </BrowserRouter>
+    
+    
+    </div>
   );
 }
+
+
 
 export default App;
 
